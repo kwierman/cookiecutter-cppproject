@@ -1,0 +1,1 @@
+#include "{{ cookiecutter.project_name }}.hh"

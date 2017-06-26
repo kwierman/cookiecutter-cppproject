@@ -29,7 +29,7 @@ add_library ({{ cookiecutter.project_name|lower }} SHARED ${srcs})
 target_include_directories ({{ cookiecutter.project_name|lower }} PRIVATE ${PROJECT_SOURCE_DIR}/include)
 taret_link_libraries( {{ cookiecutter.project_name|lower }}  LINK_PUBLIC ${Boost_LIBRARIES} )
 
-file (GLOB testSources test/*.cpp)
+file (GLOB testSources test/*.cc)
 add_executable ({{ cookiecutter.project_name|lower }}test ${testSources})
 target_link_libraries ({{ cookiecutter.project_name|lower }}test {{ cookiecutter.project_name|lower }} gmock gmock_main gtest pthread)
 target_include_directories ({{ cookiecutter.project_name|lower }}test PRIVATE ${gtest_SOURCE_DIR}/include)
