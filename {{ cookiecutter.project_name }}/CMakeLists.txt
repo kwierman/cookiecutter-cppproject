@@ -48,4 +48,11 @@ configure_file(
     IMMEDIATE @ONLY)
 
 add_custom_target(uninstall 
-    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+  COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+
+add_custom_target(setup
+  COMMAND export PATH=$PATH:${CMAKE_INSTALL_PREFIX}/bin
+  COMMAND export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${CMAKE_INSTALL_PREFIX}/lib
+  COMMAND export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:${CMAKE_INSTALL_PREFIX}/lib
+  COMMAND export PYTHONPATH=$PYTHONPATH:${CMAKE_INSTALL_PREFIX}/lib
+  )
