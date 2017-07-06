@@ -5,7 +5,7 @@ set({{ cookiecutter.project_name|lower }}_MAJOR_VERSION 0)
 set({{ cookiecutter.project_name|lower }}_MINOR_VERSION 1)
 set({{ cookiecutter.project_name|lower }}_PATCH_VERSION 0)
 set({{ cookiecutter.project_name|lower }}_VERSION
-  ${{{ cookiecutter.project_name|lower }}_MAJOR_VERSION}.${{{ cookiecutter.project_name|lower }}_MINOR_VERSION}.${{{ cookiecutter.project_name|lower }}_PATCH_VERSION})
+  ${{ cookiecutter.project_name|lower }}_MAJOR_VERSION}.${{ cookiecutter.project_name|lower }}_MINOR_VERSION}.${{ cookiecutter.project_name|lower }}_PATCH_VERSION})
 
 if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
     message(STATUS ${PROJECT_NAME} " requires an out-of-source build.")
